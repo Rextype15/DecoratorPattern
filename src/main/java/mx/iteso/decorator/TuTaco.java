@@ -7,12 +7,14 @@ import mx.iteso.decorator.condiments.TortillaMaiz;
 import mx.iteso.decorator.condiments.meat.Chorizo;
 import mx.iteso.decorator.condiments.meat.Lengua;
 import mx.iteso.decorator.condiments.meat.Pastor;
+import mx.iteso.decorator.condiments.meat.Pescado;
 import mx.iteso.decorator.tacos.Quesadilla;
+import mx.iteso.decorator.tacos.Size;
 import mx.iteso.decorator.tacos.TacoNormal;
 
 public class TuTaco {
     public static void main(String[] args) {
-        Taco taco = new TacoNormal();
+        Taco taco = new TacoNormal(Size.Mega);
         System.out.println(taco.getDescription());
         System.out.println("$" + taco.cost() + " MXN");
 
@@ -37,7 +39,7 @@ public class TuTaco {
         System.out.println(taco2.getDescription());
         System.out.println("$" + taco2.cost() + " MXN");
 
-        Taco taco3 = new Quesadilla();
+        Taco taco3 = new Quesadilla(Size.Mini);
 
         taco3 = new TortillaHarina(taco3);
         taco3 = new Pastor(taco3);
@@ -47,5 +49,13 @@ public class TuTaco {
         System.out.println();
         System.out.println(taco3.getDescription());
         System.out.println("$" + taco3.cost() + " MXN");
+
+        Taco taco4 = new TacoNormal(Size.Mini);
+
+        taco4 = new Pescado(taco4);
+        System.out.println();
+        System.out.println();
+        System.out.println(taco4.getDescription());
+        System.out.println("$" + taco4.cost() + " MXN");
     }
 }

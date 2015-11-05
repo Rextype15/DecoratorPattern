@@ -8,6 +8,7 @@ public class Cilantro extends CondimentsDecorator {
 
     public Cilantro (Taco taco){
         this.taco = taco;
+        this.TacoSize = taco.TacoSize;
     }
 
     @Override

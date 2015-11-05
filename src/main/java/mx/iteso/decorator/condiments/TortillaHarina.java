@@ -8,6 +8,7 @@ public class TortillaHarina extends CondimentsDecorator {
 
     public TortillaHarina(Taco taco){
         this.taco = taco;
+        this.TacoSize = taco.TacoSize;
     }
 
     @Override

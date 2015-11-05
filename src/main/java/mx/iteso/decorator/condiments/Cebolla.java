@@ -8,6 +8,7 @@ public class Cebolla extends CondimentsDecorator {
 
     public Cebolla (Taco taco){
         this.taco = taco;
+        this.TacoSize = taco.TacoSize;
     }
 
     @Override
